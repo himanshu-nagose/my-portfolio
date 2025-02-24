@@ -1,38 +1,115 @@
-.App {
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e3eaf7);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(120deg, #007bff, #6610f2);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+header a {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: #007bff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+header a:hover {
+  transform: scale(1.1);
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Project Cards */
+.project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.project-card:hover {
+  transform: translateY(-10px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Social Icons */
+.social-icons a {
+  font-size: 24px;
+  margin: 0 15px;
+  color: #007bff;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #6610f2;
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Resume Download Button */
+.resume-btn {
+  background-color: #28a745;
   color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.resume-btn:hover {
+  background-color: #218838;
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
+/* Animations */
+@keyframes fadeInDown {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
